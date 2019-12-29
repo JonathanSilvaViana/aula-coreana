@@ -34,13 +34,13 @@
     <nav class="light-blue lighten-2" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Aula coreana</a>
       <ul class="right hide-on-med-and-down link-menu-site">
-        <li><a class="menu-options-landing-page-wp" href="https://www.kpopstation.com.br">Kpopstation</a></li>
-        <li><a class="menu-options-landing-page-wp" href="#footer">Materiais</a></li>
+        <li class="sidenav-close"><a class="menu-options-landing-page-wp" href="https://www.kpopstation.com.br">Kpopstation</a></li>
+        <li class="sidenav-close"><a class="menu-options-landing-page-wp" href="#footer">Materiais</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <li><a class="menu-options-landing-page-wp" href="https://www.kpopstation.com.br">Kpopstation</a></li>
-        <li><a class="menu-options-landing-page-wp" href="#footer">Materiais</a></li>
+        <li class="sidenav-close"><a class="menu-options-landing-page-wp" href="https://www.kpopstation.com.br">Kpopstation</a></li>
+        <li class="sidenav-close"><a class="menu-options-landing-page-wp" href="#footer">Materiais</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
@@ -220,34 +220,14 @@ Aprender o idioma coreano é certamente uma boa definição de investimento fina
     </div>
   </footer>
      
+     
+     
       <!--JavaScript at end of body for optimized loading-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha256-Kg2zTcFO9LXOc7IwcBx1YeUBJmekycsnTsq2RuFHSZU=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://materializecss.com/templates/starter-template/js/init.js"></script>
-      
-      <script>
-          
-          document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.sidenav');
-        var instances = M.Sidenav.init(elems, {});
-        });
-        
-        </script>
-        
-        <script>
-        
-            /*$('.menu-options-landing-page-wp').click(function(){
-               $('.sidenav').close();
-            });*/
-            
-            $(document).ready(function(){
-                $('.sidenav').sidenav().on('click tap', 'li a', () => {
-                $('.sidenav').sidenav('close');
-                });
-            });
-            
-        </script>
+      <script src="js/initier.js"></script>
       
       
       <div class="drag-target"></div>
