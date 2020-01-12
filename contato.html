@@ -94,8 +94,9 @@
       <div class="row">
         <div class="input-field col l6 s12">
          <i class="fab fa-whatsapp prefix"></i>
-          <input id="whatsapp" name="whatsapp" type="text" class="validate" required="true" data-mask="(99)9999-9999" pattern="\(\d{2}\)\d{4}-\d{4}">
-          <script type="text/javascript">$("#whatsapp").mask("(99)9999-9999");</script>
+          <input id="whatsapp" name="whatsapp" type="text" class="validate" required="true">
+          <!--<input id="whatsapp" name="whatsapp" type="text" class="validate" required="true" data-mask="(99)9999-9999" pattern="\(\d{2}\)\d{4}-\d{4}">-->
+          <!--<script type="text/javascript">$("#whatsapp").mask("(99)9999-9999");</script>-->
           <label for="whatsapp">Whatsapp ou celular sem o 9</label>
           <span class="helper-text" data-error="Algo errado aqui, tente sem o 9" data-success=":)">&nbsp;</span>
         </div>
@@ -228,7 +229,23 @@ Aprender o idioma coreano é certamente uma boa definição de investimento fina
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://materializecss.com/templates/starter-template/js/init.js"></script>
       <script src="js/initier.js"></script>
-      
+      <script src="js/maskedinput.js"></script>
+    <script language="javascript">
+      function ApplyCelular94Digits(campo)
+{
+campo.focusout(function(){
+    var phone, element;
+    element = jQuery(this);
+    jQuery.mask.definitions['~'] = $.mask.definitions['*'];
+    delete $.mask.definitions['*'];  
+    element.unmask();
+    element.mask("99 99999-9999");
+}).trigger('focusout');
+}
+    </script>
+     <script>
+  ApplyCelular94Digits(jQuery('#whatsapp'));
+</script>
       
       <div class="drag-target"></div>
       <div class="sidenav-overlay"></div>
