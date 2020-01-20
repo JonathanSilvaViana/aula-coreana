@@ -113,14 +113,14 @@
           <div class="input-field col l12 s12">
               <div class="input-field col s12">
                <i class="material-icons prefix">record_voice_over</i>
-                <select class="" required id="select" onchange="pegaValor(this.value)">
+                <select class="" required="true" id="select" onchange="pegaValor(this.value)">
                   <option class="light-blue lighten-2" value="0" disabled selected>Selecione uma opção</option>
                   <option class="light-blue lighten-2" value="1">Iniciante</option>
                   <option class="light-blue lighten-2" value="2">Básico</option>
                   <option class="light-blue lighten-2" value="3">Intermediário</option>
                   <option class="light-blue lighten-2" value="4">Avançado</option>
                 </select>
-                <label class="select-label">Qual seu nível em coreano?</label>
+                <label for="select" class="select-label" data-error="wrong" data-success="right">Qual seu nível em coreano?</label>
                 <span class="helper-text" data-error="Diga-nos seu nível" data-success=":)">&nbsp;</span>
               </div>
           </div>
@@ -129,7 +129,7 @@
       <div class="row">
       <div class="input-field col l12 s12">
       <i class="material-icons prefix">mode_edit</i>
-      <textarea id="textarea" name="textarea" class="materialize-textarea" maxlength="100" data-length="100" required="true"></textarea>
+      <textarea id="textarea" name="textarea" class="materialize-textarea" maxlength="100" data-length="100" required="true" placeholder="Ex. horário desejado ou dúvida"></textarea>
           <label for="textarea">Mensagem</label>
           <span class="helper-text" data-error="Algo errado aqui" data-success=":)">&nbsp;</span>
       </div>
